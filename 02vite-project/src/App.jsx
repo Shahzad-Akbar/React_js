@@ -7,14 +7,26 @@ function App() {
  const val="chai aur react"
  let [num, setNum]=useState(0)           //useState is hook which is used to change all values placed on different places on UI
 const addValue= ()=>{
-  console.log('value is added',num)
-  num +=1
-  setNum(num) 
+  if(num<=19){
+    num=num+1
+    setNum(num)
+    console.log("value Added", num)
+  }
+  else{
+    console.log(" value greater than 20 is not acceptable")
+  }
 }
 function RemoveValue(){
-  console.log("value Removed", num)
-  num=num-1
-  setNum(num)
+  if(num>=1){
+    num=num-1
+    setNum(num)
+    console.log("value Removed", num)
+  }
+  else{
+    console.log("Negative value not acceptable")
+  }
+
+ 
 }
 
   return (
